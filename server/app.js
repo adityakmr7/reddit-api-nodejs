@@ -12,8 +12,12 @@ mongoose.connect('mongodb://localhost:27017/reddit', {useNewUrlParser: true} , (
     console.log('connected to mongodb');
 });
 
+//passport /config/passport.js
+require('./config/passport');
+
 //middleware
 app.use(bodyParser.json());
+//Routes
 app.use('/api', routes);
 
 export default  app;

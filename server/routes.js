@@ -10,10 +10,14 @@ const routes =  express();
 routes.get('/', basicController.get);
 //User Routes
 routes.post('/signup', userController.post);
+routes.post('/login', userController.login);
+
 //Post Rotues
 routes.post('/post', postController.post);
 routes.get('/posts', postController.getAll);
 
 //comments routes
 routes.post('/comment', commentController.post);
+
+
 export default routes;
