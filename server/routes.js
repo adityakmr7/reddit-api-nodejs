@@ -16,7 +16,7 @@ routes.post('/login', userController.login);
 //Post Rotues
 //TODO: add authentication routes
 
-routes.post('/post', postController.post);
+routes.post('/post', auth.required, postController.post);
 routes.get('/posts', postController.getAll);
 
 //comments routes
