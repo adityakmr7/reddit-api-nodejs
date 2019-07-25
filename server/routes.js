@@ -18,6 +18,9 @@ routes.post('/login', userController.login);
 
 routes.post('/post', auth.required, postController.post);
 routes.get('/posts', postController.getAll);
+routes.put('/posts/:id', postController.put);
+routes.get('/posts/:id', postController.get);
+routes.put('/posts/:id/delete', postController.delete);
 
 //comments routes
 routes.post('/comment', auth.required, commentController.post);
